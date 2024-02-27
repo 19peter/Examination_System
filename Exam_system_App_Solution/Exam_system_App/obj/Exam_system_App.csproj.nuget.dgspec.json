@@ -1,20 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Exam_System\\examination-system\\Exam_system_App_Solution\\Exam_system_App\\Exam_system_App.csproj": {}
+    "E:\\i will prepare my paper to be the best in this world\\ITI\\ADV_SQL\\Project\\examination-system\\Exam_system_App_Solution\\Exam_system_App\\Exam_system_App.csproj": {}
   },
   "projects": {
-    "D:\\Exam_System\\examination-system\\Exam_system_App_Solution\\Exam_system_App\\Exam_system_App.csproj": {
+    "E:\\i will prepare my paper to be the best in this world\\ITI\\ADV_SQL\\Project\\examination-system\\Exam_system_App_Solution\\Exam_system_App\\Exam_system_App.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Exam_System\\examination-system\\Exam_system_App_Solution\\Exam_system_App\\Exam_system_App.csproj",
+        "projectUniqueName": "E:\\i will prepare my paper to be the best in this world\\ITI\\ADV_SQL\\Project\\examination-system\\Exam_system_App_Solution\\Exam_system_App\\Exam_system_App.csproj",
         "projectName": "Exam_system_App",
-        "projectPath": "D:\\Exam_System\\examination-system\\Exam_system_App_Solution\\Exam_system_App\\Exam_system_App.csproj",
-        "packagesPath": "C:\\Users\\ahmed\\.nuget\\packages\\",
-        "outputPath": "D:\\Exam_System\\examination-system\\Exam_system_App_Solution\\Exam_system_App\\obj\\",
+        "projectPath": "E:\\i will prepare my paper to be the best in this world\\ITI\\ADV_SQL\\Project\\examination-system\\Exam_system_App_Solution\\Exam_system_App\\Exam_system_App.csproj",
+        "packagesPath": "C:\\Users\\yasmeen\\.nuget\\packages\\",
+        "outputPath": "E:\\i will prepare my paper to be the best in this world\\ITI\\ADV_SQL\\Project\\examination-system\\Exam_system_App_Solution\\Exam_system_App\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\ahmed\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\yasmeen\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -34,11 +38,6 @@
           "warnAsError": [
             "NU1605"
           ]
-        },
-        "restoreAuditProperties": {
-          "enableAudit": "true",
-          "auditLevel": "low",
-          "auditMode": "direct"
         }
       },
       "frameworks": {

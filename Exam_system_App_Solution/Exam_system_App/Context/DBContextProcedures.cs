@@ -79,6 +79,7 @@ namespace Exam_system_App.Context
             modelBuilder.Entity<Student_Course_SelectResult>().HasNoKey().ToView(null);
             modelBuilder.Entity<Student_Course_UpdateResult>().HasNoKey().ToView(null);
             modelBuilder.Entity<Student_DeleteResult>().HasNoKey().ToView(null);
+            modelBuilder.Entity<Student_GradeResult>().HasNoKey().ToView(null);
             modelBuilder.Entity<Student_Grade_ReportResult>().HasNoKey().ToView(null);
             modelBuilder.Entity<Student_InsertResult>().HasNoKey().ToView(null);
             modelBuilder.Entity<Student_SelectResult>().HasNoKey().ToView(null);
@@ -1888,6 +1889,32 @@ namespace Exam_system_App.Context
                 parameterreturnValue,
             };
             var _ = await _context.SqlQueryAsync<Student_DeleteResult>("EXEC @returnValue = [dbo].[Student_Delete] @id", sqlParameters, cancellationToken);
+
+            returnValue?.SetValue(parameterreturnValue.Value);
+
+            return _;
+        }
+
+        public virtual async Task<List<Student_GradeResult>> Student_GradeAsync(int? stud_id, OutputParameter<int> returnValue = null, CancellationToken cancellationToken = default)
+        {
+            var parameterreturnValue = new SqlParameter
+            {
+                ParameterName = "returnValue",
+                Direction = System.Data.ParameterDirection.Output,
+                SqlDbType = System.Data.SqlDbType.Int,
+            };
+
+            var sqlParameters = new []
+            {
+                new SqlParameter
+                {
+                    ParameterName = "stud_id",
+                    Value = stud_id ?? Convert.DBNull,
+                    SqlDbType = System.Data.SqlDbType.Int,
+                },
+                parameterreturnValue,
+            };
+            var _ = await _context.SqlQueryAsync<Student_GradeResult>("EXEC @returnValue = [dbo].[Student_Grade] @stud_id", sqlParameters, cancellationToken);
 
             returnValue?.SetValue(parameterreturnValue.Value);
 

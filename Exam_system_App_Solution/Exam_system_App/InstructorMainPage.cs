@@ -53,7 +53,7 @@ namespace Exam_system_App
             //context.Database.SetCommandTimeout(120);
             mcq = (int)this.mcqNum.Value;
             tf = (int)this.tfNum.Value;
-            course = this.crsCbox.SelectedValue?.ToString() ?? String.Empty;
+            course = this.crsCbox.Text ?? String.Empty;
             questionSum = mcq + tf;
 
             var parameters = new[]

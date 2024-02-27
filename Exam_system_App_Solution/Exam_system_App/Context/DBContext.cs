@@ -44,6 +44,8 @@ public partial class DBContext : DbContext
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
+        modelBuilder.UseCollation("SQL_Latin1_General_CP1_CI_AS");
+
         modelBuilder.Entity<Course>(entity =>
         {
             entity.HasOne(d => d.Ins).WithMany(p => p.Courses).HasConstraintName("FK_Course_Instructor");

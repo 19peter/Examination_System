@@ -69,6 +69,7 @@ namespace Exam_system_App.Context
         Task<List<Student_Course_SelectResult>> Student_Course_SelectAsync(int? id, OutputParameter<int> returnValue = null, CancellationToken cancellationToken = default);
         Task<List<Student_Course_UpdateResult>> Student_Course_UpdateAsync(int? stid, int? crsid, OutputParameter<int> returnValue = null, CancellationToken cancellationToken = default);
         Task<List<Student_DeleteResult>> Student_DeleteAsync(int? id, OutputParameter<int> returnValue = null, CancellationToken cancellationToken = default);
+        Task<List<Student_GradeResult>> Student_GradeAsync(int? stud_id, OutputParameter<int> returnValue = null, CancellationToken cancellationToken = default);
         Task<List<Student_Grade_ReportResult>> Student_Grade_ReportAsync(int? stud_id, OutputParameter<int> returnValue = null, CancellationToken cancellationToken = default);
         Task<List<Student_InsertResult>> Student_InsertAsync(string fname, string lname, string email, int? pass, int? deptid, OutputParameter<int> returnValue = null, CancellationToken cancellationToken = default);
         Task<List<Student_SelectResult>> Student_SelectAsync(OutputParameter<int> returnValue = null, CancellationToken cancellationToken = default);
