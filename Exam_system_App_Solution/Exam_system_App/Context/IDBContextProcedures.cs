@@ -27,7 +27,7 @@ namespace Exam_system_App.Context
         Task<List<Department_UpdateResult>> Department_UpdateAsync(int? id, string name, int? manager_id, OutputParameter<int> returnValue = null, CancellationToken cancellationToken = default);
         Task<List<Department_UpdateManagerByIdResult>> Department_UpdateManagerByIdAsync(int? Dept_Id, int? Manager_Id, OutputParameter<int> returnValue = null, CancellationToken cancellationToken = default);
         Task<List<Department_UpdateNameByIdResult>> Department_UpdateNameByIdAsync(int? Dept_Id, string Dept_Name, OutputParameter<int> returnValue = null, CancellationToken cancellationToken = default);
-        Task<List<Exam_AnswerResult>> Exam_AnswerAsync(int? exID, int? stID, string ans1, string ans2, string ans3, string ans4, string ans5, string ans6, string ans7, string ans8, string ans9, string ans10, OutputParameter<int> returnValue = null, CancellationToken cancellationToken = default);
+        Task<int> Exam_AnswerAsync(int? exID, int? stID, string ans1, string ans2, string ans3, string ans4, string ans5, string ans6, string ans7, string ans8, string ans9, string ans10, OutputParameter<int> returnValue = null, CancellationToken cancellationToken = default);
         Task<int> Exam_AnswersAsync(DataTable t, OutputParameter<int> returnValue = null, CancellationToken cancellationToken = default);
         Task<List<Exam_CorrectionResult>> Exam_CorrectionAsync(int? Exam_ID, int? St_ID, OutputParameter<int> returnValue = null, CancellationToken cancellationToken = default);
         Task<List<Exam_Correction1Result>> Exam_Correction1Async(int? Exam_ID, int? St_ID, OutputParameter<int> returnValue = null, CancellationToken cancellationToken = default);

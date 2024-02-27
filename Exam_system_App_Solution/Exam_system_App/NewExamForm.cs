@@ -37,7 +37,7 @@ namespace Exam_system_App
         {
             InitializeComponent();
             context = new();
-
+            this.FormClosing += NewExamForm_FormClosing;
         }
 
         private int questionIndex = 0;
@@ -53,7 +53,7 @@ namespace Exam_system_App
 
             var exam = await context.Procedures.Exam_SelectAsync(Constants.CrsID);
             Constants.ExID = exam[0].Exam_ID;
-            
+
             var res = await context.Procedures.Exam_Questions_ReportAsync(exam[0].Exam_ID);
 
             foreach (var item in res)
@@ -215,6 +215,7 @@ namespace Exam_system_App
 
         private async void submitbtn_Click(object sender, EventArgs e)
         {
+
             await context.Procedures.Exam_AnswerAsync(
                 Constants.ExID,
                 Constants.UserID,
@@ -234,8 +235,13 @@ namespace Exam_system_App
             StudentMainPage studentMain = new();
             studentMain.Show();
 
-            
 
+
+        }
+
+        private void NewExamForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

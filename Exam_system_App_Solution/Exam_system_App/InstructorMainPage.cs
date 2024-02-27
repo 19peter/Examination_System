@@ -22,6 +22,8 @@ namespace Exam_system_App
         {
             InitializeComponent();
             Load += InstructorMainPage_Load;
+
+            this.FormClosing += InstructorMainPage_FormClosing;
         }
 
         private async void InstructorMainPage_Load(object? sender, EventArgs e)
@@ -40,14 +42,14 @@ namespace Exam_system_App
         private int questionSum;
 
 
-        
+
 
         private async void generateBtn_Click(object sender, EventArgs e)
         {
 
-            
 
-           
+
+
             //context.Database.SetCommandTimeout(120);
             mcq = (int)this.mcqNum.Value;
             tf = (int)this.tfNum.Value;
@@ -61,7 +63,7 @@ namespace Exam_system_App
                 new SqlParameter("@tf", tf)
             };
 
-            
+
             if (questionSum == 10 && course != String.Empty)
             {
 
@@ -70,9 +72,9 @@ namespace Exam_system_App
 
                 var ex = context.Exams.Select(e => e.ExamId).OrderByDescending(exID => exID).FirstOrDefault();
                 generationInfoLbl.Text = $"exam {ex} generated successfully";
-                
 
-            }   
+
+            }
             else
             {
                 MessageBox.Show("Questions must be 10!");
@@ -93,5 +95,12 @@ namespace Exam_system_App
             //SP EXAM_QUESTION_REPORT
             //this.examGridView.BindingContext
         }
+
+        private void InstructorMainPage_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
+        }
+
+      
     }
 }

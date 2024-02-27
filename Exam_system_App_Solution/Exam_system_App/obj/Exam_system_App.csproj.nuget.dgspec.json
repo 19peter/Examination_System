@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\VisualStudio\\projects\\Exam_System\\Exam_system_App_Solution\\Exam_system_App\\Exam_system_App.csproj": {}
+    "D:\\Exam_System\\examination-system\\Exam_system_App_Solution\\Exam_system_App\\Exam_system_App.csproj": {}
   },
   "projects": {
-    "D:\\VisualStudio\\projects\\Exam_System\\Exam_system_App_Solution\\Exam_system_App\\Exam_system_App.csproj": {
+    "D:\\Exam_System\\examination-system\\Exam_system_App_Solution\\Exam_system_App\\Exam_system_App.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\VisualStudio\\projects\\Exam_System\\Exam_system_App_Solution\\Exam_system_App\\Exam_system_App.csproj",
+        "projectUniqueName": "D:\\Exam_System\\examination-system\\Exam_system_App_Solution\\Exam_system_App\\Exam_system_App.csproj",
         "projectName": "Exam_system_App",
-        "projectPath": "D:\\VisualStudio\\projects\\Exam_System\\Exam_system_App_Solution\\Exam_system_App\\Exam_system_App.csproj",
-        "packagesPath": "C:\\Users\\DELL\\.nuget\\packages\\",
-        "outputPath": "D:\\VisualStudio\\projects\\Exam_System\\Exam_system_App_Solution\\Exam_system_App\\obj\\",
+        "projectPath": "D:\\Exam_System\\examination-system\\Exam_system_App_Solution\\Exam_system_App\\Exam_system_App.csproj",
+        "packagesPath": "C:\\Users\\ahmed\\.nuget\\packages\\",
+        "outputPath": "D:\\Exam_System\\examination-system\\Exam_system_App_Solution\\Exam_system_App\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\DELL\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\ahmed\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -34,6 +34,11 @@
           "warnAsError": [
             "NU1605"
           ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
         }
       },
       "frameworks": {

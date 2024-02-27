@@ -46,7 +46,6 @@ namespace Exam_system_App.Context
             modelBuilder.Entity<Department_UpdateResult>().HasNoKey().ToView(null);
             modelBuilder.Entity<Department_UpdateManagerByIdResult>().HasNoKey().ToView(null);
             modelBuilder.Entity<Department_UpdateNameByIdResult>().HasNoKey().ToView(null);
-            modelBuilder.Entity<Exam_AnswerResult>().HasNoKey().ToView(null);
             modelBuilder.Entity<Exam_CorrectionResult>().HasNoKey().ToView(null);
             modelBuilder.Entity<Exam_Correction1Result>().HasNoKey().ToView(null);
             modelBuilder.Entity<Exam_DeleteResult>().HasNoKey().ToView(null);
@@ -538,7 +537,7 @@ namespace Exam_system_App.Context
             return _;
         }
 
-        public virtual async Task<List<Exam_AnswerResult>> Exam_AnswerAsync(int? exID, int? stID, string ans1, string ans2, string ans3, string ans4, string ans5, string ans6, string ans7, string ans8, string ans9, string ans10, OutputParameter<int> returnValue = null, CancellationToken cancellationToken = default)
+        public virtual async Task<int> Exam_AnswerAsync(int? exID, int? stID, string ans1, string ans2, string ans3, string ans4, string ans5, string ans6, string ans7, string ans8, string ans9, string ans10, OutputParameter<int> returnValue = null, CancellationToken cancellationToken = default)
         {
             var parameterreturnValue = new SqlParameter
             {
@@ -564,76 +563,76 @@ namespace Exam_system_App.Context
                 new SqlParameter
                 {
                     ParameterName = "ans1",
-                    Size = 100,
+                    Size = 255,
                     Value = ans1 ?? Convert.DBNull,
                     SqlDbType = System.Data.SqlDbType.VarChar,
                 },
                 new SqlParameter
                 {
                     ParameterName = "ans2",
-                    Size = 100,
+                    Size = 255,
                     Value = ans2 ?? Convert.DBNull,
                     SqlDbType = System.Data.SqlDbType.VarChar,
                 },
                 new SqlParameter
                 {
                     ParameterName = "ans3",
-                    Size = 100,
+                    Size = 255,
                     Value = ans3 ?? Convert.DBNull,
                     SqlDbType = System.Data.SqlDbType.VarChar,
                 },
                 new SqlParameter
                 {
                     ParameterName = "ans4",
-                    Size = 100,
+                    Size = 255,
                     Value = ans4 ?? Convert.DBNull,
                     SqlDbType = System.Data.SqlDbType.VarChar,
                 },
                 new SqlParameter
                 {
                     ParameterName = "ans5",
-                    Size = 100,
+                    Size = 255,
                     Value = ans5 ?? Convert.DBNull,
                     SqlDbType = System.Data.SqlDbType.VarChar,
                 },
                 new SqlParameter
                 {
                     ParameterName = "ans6",
-                    Size = 100,
+                    Size = 255,
                     Value = ans6 ?? Convert.DBNull,
                     SqlDbType = System.Data.SqlDbType.VarChar,
                 },
                 new SqlParameter
                 {
                     ParameterName = "ans7",
-                    Size = 100,
+                    Size = 255,
                     Value = ans7 ?? Convert.DBNull,
                     SqlDbType = System.Data.SqlDbType.VarChar,
                 },
                 new SqlParameter
                 {
                     ParameterName = "ans8",
-                    Size = 100,
+                    Size = 255,
                     Value = ans8 ?? Convert.DBNull,
                     SqlDbType = System.Data.SqlDbType.VarChar,
                 },
                 new SqlParameter
                 {
                     ParameterName = "ans9",
-                    Size = 100,
+                    Size = 255,
                     Value = ans9 ?? Convert.DBNull,
                     SqlDbType = System.Data.SqlDbType.VarChar,
                 },
                 new SqlParameter
                 {
                     ParameterName = "ans10",
-                    Size = 100,
+                    Size = 255,
                     Value = ans10 ?? Convert.DBNull,
                     SqlDbType = System.Data.SqlDbType.VarChar,
                 },
                 parameterreturnValue,
             };
-            var _ = await _context.SqlQueryAsync<Exam_AnswerResult>("EXEC @returnValue = [dbo].[Exam_Answer] @exID, @stID, @ans1, @ans2, @ans3, @ans4, @ans5, @ans6, @ans7, @ans8, @ans9, @ans10", sqlParameters, cancellationToken);
+            var _ = await _context.Database.ExecuteSqlRawAsync("EXEC @returnValue = [dbo].[Exam_Answer] @exID, @stID, @ans1, @ans2, @ans3, @ans4, @ans5, @ans6, @ans7, @ans8, @ans9, @ans10", sqlParameters, cancellationToken);
 
             returnValue?.SetValue(parameterreturnValue.Value);
 

@@ -39,17 +39,22 @@
             label2 = new Label();
             label1 = new Label();
             tabPage2 = new TabPage();
-            viewBtn = new Button();
-            examGridView = new DataGridView();
+            splitContainer1 = new SplitContainer();
             examIdNum = new NumericUpDown();
+            viewBtn = new Button();
             label4 = new Label();
+            examGridView = new DataGridView();
             tabControl1.SuspendLayout();
             tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)tfNum).BeginInit();
             ((System.ComponentModel.ISupportInitialize)mcqNum).BeginInit();
             tabPage2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)examGridView).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)splitContainer1).BeginInit();
+            splitContainer1.Panel1.SuspendLayout();
+            splitContainer1.Panel2.SuspendLayout();
+            splitContainer1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)examIdNum).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)examGridView).BeginInit();
             SuspendLayout();
             // 
             // tabControl1
@@ -58,9 +63,10 @@
             tabControl1.Controls.Add(tabPage1);
             tabControl1.Controls.Add(tabPage2);
             tabControl1.Location = new Point(0, 0);
+            tabControl1.Margin = new Padding(3, 4, 3, 4);
             tabControl1.Name = "tabControl1";
             tabControl1.SelectedIndex = 0;
-            tabControl1.Size = new Size(792, 491);
+            tabControl1.Size = new Size(905, 460);
             tabControl1.TabIndex = 0;
             // 
             // tabPage1
@@ -73,27 +79,29 @@
             tabPage1.Controls.Add(mcqNum);
             tabPage1.Controls.Add(label2);
             tabPage1.Controls.Add(label1);
-            tabPage1.Location = new Point(4, 24);
+            tabPage1.Location = new Point(4, 29);
+            tabPage1.Margin = new Padding(3, 4, 3, 4);
             tabPage1.Name = "tabPage1";
-            tabPage1.Padding = new Padding(3);
-            tabPage1.Size = new Size(784, 463);
+            tabPage1.Padding = new Padding(3, 4, 3, 4);
+            tabPage1.Size = new Size(897, 427);
             tabPage1.TabIndex = 0;
             tabPage1.Text = "Generate Exam";
             tabPage1.UseVisualStyleBackColor = true;
             // 
             // generationInfoLbl
             // 
-            generationInfoLbl.Location = new Point(111, 348);
+            generationInfoLbl.Location = new Point(127, 464);
             generationInfoLbl.Name = "generationInfoLbl";
-            generationInfoLbl.Size = new Size(527, 29);
+            generationInfoLbl.Size = new Size(602, 39);
             generationInfoLbl.TabIndex = 7;
             // 
             // generateBtn
             // 
             generateBtn.Anchor = AnchorStyles.None;
-            generateBtn.Location = new Point(251, 279);
+            generateBtn.Location = new Point(287, 372);
+            generateBtn.Margin = new Padding(3, 4, 3, 4);
             generateBtn.Name = "generateBtn";
-            generateBtn.Size = new Size(252, 26);
+            generateBtn.Size = new Size(288, 35);
             generateBtn.TabIndex = 6;
             generateBtn.Text = "Generate Exam";
             generateBtn.UseVisualStyleBackColor = true;
@@ -103,9 +111,9 @@
             // 
             label3.Anchor = AnchorStyles.None;
             label3.AutoSize = true;
-            label3.Location = new Point(251, 205);
+            label3.Location = new Point(287, 273);
             label3.Name = "label3";
-            label3.Size = new Size(60, 15);
+            label3.Size = new Size(75, 20);
             label3.TabIndex = 5;
             label3.Text = "True/False";
             // 
@@ -113,34 +121,37 @@
             // 
             crsCbox.Anchor = AnchorStyles.None;
             crsCbox.FormattingEnabled = true;
-            crsCbox.Location = new Point(382, 139);
+            crsCbox.Location = new Point(437, 185);
+            crsCbox.Margin = new Padding(3, 4, 3, 4);
             crsCbox.Name = "crsCbox";
-            crsCbox.Size = new Size(121, 23);
+            crsCbox.Size = new Size(138, 28);
             crsCbox.TabIndex = 4;
             // 
             // tfNum
             // 
             tfNum.Anchor = AnchorStyles.None;
-            tfNum.Location = new Point(382, 197);
+            tfNum.Location = new Point(437, 263);
+            tfNum.Margin = new Padding(3, 4, 3, 4);
             tfNum.Name = "tfNum";
-            tfNum.Size = new Size(121, 23);
+            tfNum.Size = new Size(138, 27);
             tfNum.TabIndex = 3;
             // 
             // mcqNum
             // 
             mcqNum.Anchor = AnchorStyles.None;
-            mcqNum.Location = new Point(382, 168);
+            mcqNum.Location = new Point(437, 224);
+            mcqNum.Margin = new Padding(3, 4, 3, 4);
             mcqNum.Name = "mcqNum";
-            mcqNum.Size = new Size(121, 23);
+            mcqNum.Size = new Size(138, 27);
             mcqNum.TabIndex = 2;
             // 
             // label2
             // 
             label2.Anchor = AnchorStyles.None;
             label2.AutoSize = true;
-            label2.Location = new Point(251, 176);
+            label2.Location = new Point(287, 235);
             label2.Name = "label2";
-            label2.Size = new Size(38, 15);
+            label2.Size = new Size(46, 20);
             label2.TabIndex = 1;
             label2.Text = "MCQ ";
             // 
@@ -148,79 +159,112 @@
             // 
             label1.Anchor = AnchorStyles.None;
             label1.AutoSize = true;
-            label1.Location = new Point(251, 142);
+            label1.Location = new Point(287, 189);
             label1.Name = "label1";
-            label1.Size = new Size(79, 15);
+            label1.Size = new Size(98, 20);
             label1.TabIndex = 0;
             label1.Text = "Course Name";
             // 
             // tabPage2
             // 
-            tabPage2.Controls.Add(viewBtn);
-            tabPage2.Controls.Add(examGridView);
-            tabPage2.Controls.Add(examIdNum);
-            tabPage2.Controls.Add(label4);
-            tabPage2.Location = new Point(4, 24);
+            tabPage2.Controls.Add(splitContainer1);
+            tabPage2.Location = new Point(4, 29);
+            tabPage2.Margin = new Padding(3, 4, 3, 4);
             tabPage2.Name = "tabPage2";
-            tabPage2.Padding = new Padding(3);
-            tabPage2.Size = new Size(784, 463);
+            tabPage2.Padding = new Padding(3, 4, 3, 4);
+            tabPage2.Size = new Size(897, 427);
             tabPage2.TabIndex = 1;
             tabPage2.Text = "View Exam";
             tabPage2.UseVisualStyleBackColor = true;
             tabPage2.Click += tabPage2_Click;
             // 
+            // splitContainer1
+            // 
+            splitContainer1.Dock = DockStyle.Fill;
+            splitContainer1.Location = new Point(3, 4);
+            splitContainer1.Name = "splitContainer1";
+            // 
+            // splitContainer1.Panel1
+            // 
+            splitContainer1.Panel1.Controls.Add(examIdNum);
+            splitContainer1.Panel1.Controls.Add(viewBtn);
+            splitContainer1.Panel1.Controls.Add(label4);
+            // 
+            // splitContainer1.Panel2
+            // 
+            splitContainer1.Panel2.Controls.Add(examGridView);
+            splitContainer1.Size = new Size(891, 419);
+            splitContainer1.SplitterDistance = 163;
+            splitContainer1.TabIndex = 4;
+            // 
+            // examIdNum
+            // 
+            examIdNum.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            examIdNum.Location = new Point(5, 46);
+            examIdNum.Margin = new Padding(3, 4, 3, 4);
+            examIdNum.Name = "examIdNum";
+            examIdNum.Size = new Size(155, 27);
+            examIdNum.TabIndex = 1;
+            // 
             // viewBtn
             // 
-            viewBtn.Location = new Point(248, 8);
+            viewBtn.Anchor = AnchorStyles.Left | AnchorStyles.Right;
+            viewBtn.Location = new Point(5, 81);
+            viewBtn.Margin = new Padding(3, 4, 3, 4);
             viewBtn.Name = "viewBtn";
-            viewBtn.Size = new Size(75, 23);
+            viewBtn.Size = new Size(155, 31);
             viewBtn.TabIndex = 3;
             viewBtn.Text = "View Exam";
             viewBtn.UseVisualStyleBackColor = true;
             viewBtn.Click += viewBtn_Click;
             // 
-            // examGridView
-            // 
-            examGridView.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            examGridView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            examGridView.Location = new Point(-4, 37);
-            examGridView.Name = "examGridView";
-            examGridView.Size = new Size(511, 296);
-            examGridView.TabIndex = 2;
-            // 
-            // examIdNum
-            // 
-            examIdNum.Location = new Point(81, 6);
-            examIdNum.Name = "examIdNum";
-            examIdNum.Size = new Size(120, 23);
-            examIdNum.TabIndex = 1;
-            // 
             // label4
             // 
+            label4.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             label4.AutoSize = true;
-            label4.Location = new Point(8, 12);
+            label4.Location = new Point(5, 12);
             label4.Name = "label4";
-            label4.Size = new Size(50, 15);
+            label4.Size = new Size(64, 20);
             label4.TabIndex = 0;
             label4.Text = "Exam ID";
             // 
+            // examGridView
+            // 
+            examGridView.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            examGridView.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            examGridView.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
+            examGridView.BackgroundColor = Color.Teal;
+            examGridView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            examGridView.Location = new Point(3, 4);
+            examGridView.Margin = new Padding(3, 4, 3, 4);
+            examGridView.Name = "examGridView";
+            examGridView.RowHeadersWidth = 51;
+            examGridView.Size = new Size(718, 411);
+            examGridView.TabIndex = 2;
+            // 
             // InstructorMainPage
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(786, 489);
+            ClientSize = new Size(898, 457);
             Controls.Add(tabControl1);
+            Margin = new Padding(3, 4, 3, 4);
             Name = "InstructorMainPage";
             Text = "InstructorMainPage";
+            FormClosing += InstructorMainPage_FormClosing;
             tabControl1.ResumeLayout(false);
             tabPage1.ResumeLayout(false);
             tabPage1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)tfNum).EndInit();
             ((System.ComponentModel.ISupportInitialize)mcqNum).EndInit();
             tabPage2.ResumeLayout(false);
-            tabPage2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)examGridView).EndInit();
+            splitContainer1.Panel1.ResumeLayout(false);
+            splitContainer1.Panel1.PerformLayout();
+            splitContainer1.Panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)splitContainer1).EndInit();
+            splitContainer1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)examIdNum).EndInit();
+            ((System.ComponentModel.ISupportInitialize)examGridView).EndInit();
             ResumeLayout(false);
         }
 
@@ -241,5 +285,6 @@
         private ComboBox crsCbox;
         private Label label1;
         private Label generationInfoLbl;
+        private SplitContainer splitContainer1;
     }
 }

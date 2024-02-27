@@ -19,13 +19,15 @@ namespace Exam_system_App
         DBContext context;
         public StudentMainPage()
         {
+            
             InitializeComponent();
             context = new();
-
+            this.FormClosing += StudentMainPage_FormClosing;
             studidnewexamtxt.Text = Constants.UserID.ToString();
             studnamenewexamtxt.Text = Constants.Username.ToString();
             this.Load += StudentMainPage_Load;
         }
+  
 
         private async void StudentMainPage_Load(object? sender, EventArgs e)
         {
@@ -57,7 +59,7 @@ namespace Exam_system_App
                 GrdGridView.Columns["St_ID"].ReadOnly = true;
                 GrdGridView.Columns["Crs_name"].ReadOnly = true;
                 GrdGridView.Columns["Final_Grade"].ReadOnly = true;
-               //new
+                //new
                 DataGridViewTextBoxColumn ex_grCol = new DataGridViewTextBoxColumn();
                 ex_grCol.HeaderText = "Exam Grade";
                 var exam_grade = await context.Procedures.ExamGradeAsync(Constants.UserID);
@@ -65,13 +67,18 @@ namespace Exam_system_App
                 GrdGridView.Columns.Add(ex_grCol);
                 GrdGridView.Rows[0].Cells[3].Value = exam_grade.ToList()[0].Exam_Grade;
                 //
-               
-                    
-                    
-               
+
+
+
+
 
 
             }
+        }
+
+        private void StudentMainPage_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

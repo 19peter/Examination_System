@@ -7,5 +7,6 @@ namespace Exam_system_App.Entities
 {
     public partial class CourseTopics_ReportResult
     {
+        public string topic_name { get; set; }
     }
 }
