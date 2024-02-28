@@ -18,10 +18,12 @@ namespace Exam_system_App
         StudentMainPage studPage;
         InstructorMainPage insPage;
         DBContext context;
+
         public SignInForm()
         {
             InitializeComponent();
             context = new DBContext();
+
         }
 
         private async void SignInbtn_Click(object sender, EventArgs e)
@@ -43,7 +45,7 @@ namespace Exam_system_App
 
                 //check password and id in table[identity]
                 //isSignedIn
-                if(identity == "Student")
+                if (identity == "Student")
                 {
                     var res = await context.Procedures.studentLoginAsync(id, password);
                     if (res.Count == 0)
@@ -88,7 +90,7 @@ namespace Exam_system_App
                 {
                     this.Hide();
                     studPage = new StudentMainPage();
-                    
+
                     studPage.Show();
                     //open stud form
                 }
@@ -112,6 +114,37 @@ namespace Exam_system_App
         }
 
         private void idtxtbox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void SignInForm_Load(object sender, EventArgs e)
+        {
+            //this.TopMost = true;
+            //this.WindowState = FormWindowState.Maximized;
+
+
+
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void SignInbtn_MouseHover(object sender, EventArgs e)
+        {
+            this.SignInbtn.BackColor = Color.DarkRed;
+        }
+
+        private void SignInbtn_MouseLeave(object sender, EventArgs e)
+        {
+            this.SignInbtn.BackColor = Color.Black;
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
         {
 
         }

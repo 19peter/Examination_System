@@ -4217,24 +4217,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\yasmeen\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\peter\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\i will prepare my paper to be the best in this world\\ITI\\ADV_SQL\\Project\\examination-system\\Exam_system_App_Solution\\Exam_system_App\\Exam_system_App.csproj",
+      "projectUniqueName": "D:\\ITI\\DB_Project\\App\\examination-system\\Exam_system_App_Solution\\Exam_system_App\\Exam_system_App.csproj",
       "projectName": "Exam_system_App",
-      "projectPath": "E:\\i will prepare my paper to be the best in this world\\ITI\\ADV_SQL\\Project\\examination-system\\Exam_system_App_Solution\\Exam_system_App\\Exam_system_App.csproj",
-      "packagesPath": "C:\\Users\\yasmeen\\.nuget\\packages\\",
-      "outputPath": "E:\\i will prepare my paper to be the best in this world\\ITI\\ADV_SQL\\Project\\examination-system\\Exam_system_App_Solution\\Exam_system_App\\obj\\",
+      "projectPath": "D:\\ITI\\DB_Project\\App\\examination-system\\Exam_system_App_Solution\\Exam_system_App\\Exam_system_App.csproj",
+      "packagesPath": "C:\\Users\\peter\\.nuget\\packages\\",
+      "outputPath": "D:\\ITI\\DB_Project\\App\\examination-system\\Exam_system_App_Solution\\Exam_system_App\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
-        "C:\\Users\\yasmeen\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Users\\peter\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -4294,7 +4289,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

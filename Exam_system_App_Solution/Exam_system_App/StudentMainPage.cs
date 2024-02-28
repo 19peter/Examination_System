@@ -19,7 +19,7 @@ namespace Exam_system_App
         DBContext context;
         public StudentMainPage()
         {
-            
+
             InitializeComponent();
             context = new();
             this.FormClosing += StudentMainPage_FormClosing;
@@ -28,7 +28,7 @@ namespace Exam_system_App
             this.Load += StudentMainPage_Load;
 
         }
-  
+
 
         private async void StudentMainPage_Load(object? sender, EventArgs e)
         {
@@ -38,7 +38,7 @@ namespace Exam_system_App
             coursescombobox.DataSource = courses;
             coursescombobox.DisplayMember = "Crs_name";
             coursescombobox.ValueMember = "Crs_ID";
-        
+
 
         }
 
@@ -71,6 +71,19 @@ namespace Exam_system_App
         private void StudentMainPage_FormClosing(object sender, FormClosingEventArgs e)
         {
             Application.Exit();
+        }
+
+
+
+        private void button1_MouseLeave(object sender, EventArgs e)
+        {
+            this.button1.BackColor = Color.Black;
+
+        }
+
+        private void button1_MouseHover(object sender, EventArgs e)
+        {
+            this.button1.BackColor = Color.DarkRed;
         }
     }
 }

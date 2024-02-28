@@ -241,7 +241,8 @@ namespace Exam_system_App
 
         private void NewExamForm_FormClosing(object sender, FormClosingEventArgs e)
         {
-            Application.Exit();
+           Application.Exit();
+           //e.Cancel = true;
         }
     }
 }

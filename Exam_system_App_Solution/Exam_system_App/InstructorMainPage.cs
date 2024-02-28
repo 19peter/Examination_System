@@ -21,6 +21,8 @@ namespace Exam_system_App
         public InstructorMainPage()
         {
             InitializeComponent();
+            Debug.WriteLine(Constants.Username.ToString());
+            this.label5.Text += Constants.Username;
             Load += InstructorMainPage_Load;
 
             this.FormClosing += InstructorMainPage_FormClosing;
@@ -71,7 +73,7 @@ namespace Exam_system_App
                 await context.Procedures.Exam_GenerationAsync(course, mcq, tf);
 
                 var ex = context.Exams.Select(e => e.ExamId).OrderByDescending(exID => exID).FirstOrDefault();
-                generationInfoLbl.Text = $"exam {ex} generated successfully";
+                generationInfoLbl.Text = $"Exam ID: {ex} Generated Successfully!";
 
 
             }
@@ -101,6 +103,15 @@ namespace Exam_system_App
             Application.Exit();
         }
 
-      
+        private void generateBtn_MouseHover(object sender, EventArgs e)
+        {
+            this.generateBtn.BackColor = Color.DarkRed;
+        }
+
+        private void generateBtn_MouseLeave(object sender, EventArgs e)
+        {
+            this.generateBtn.BackColor = Color.Black;
+
+        }
     }
 }
